@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EcoQuiz</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<!-- TELA INICIAL -->
+<div id="startScreen" class="screen">
+    <h1>EcoQuiz</h1>
+    <p class="lead">Teste seus Conhecimentos e Aprenda a Proteger a Natureza!</p>
+    <button id="startBtn" class="btn">Iniciar</button>
+</div>
+ 
+<!-- TELA DO JOGO -->
+<div id="gameScreen" class="screen hidden">
+    <div class="top-bar">
+        <div id="lives">❤️❤️❤️</div>
+        <div>Pontos: <span id="scoreValue">0</span></div>
+        <div id="timerCircle">
+            <svg width="60" height="60">
+                <circle cx="30" cy="30" r="26" class="bg"></circle>
+                <circle cx="30" cy="30" r="26" class="progress"></circle>
+            </svg>
+            <span id="timeLeft">10</span>
+        </div>
+    </div>
+ 
+    <div class="question-box">
+        <div id="questionText">Pergunta aqui...</div>
+        <div class="answers">
+            <button class="answer"><span class="letter">A:</span></button>
+            <button class="answer"><span class="letter">B:</span></button>
+            <button class="answer"><span class="letter">C:</span></button>
+            <button class="answer"><span class="letter">D:</span></button>
+        </div>
+    </div>
+ 
+    <div class="controls">
+        <button id="nextBtn" class="btn secondary" disabled>Próxima</button>
+        <button id="endBtn" class="btn secondary">Encerrar</button>
+    </div>
+</div>
+ 
+<!-- GAME OVER -->
+<div id="gameOverScreen" class="overlay hidden">
+    <div class="overlay-box">
+        <h1 class="overlay-title">GAME OVER</h1>
+        <button id="restartBtn" class="btn overlay-btn">Recomeçar</button>
+    </div>
+</div>
+ 
+<!-- VITÓRIA -->
+<div id="winScreen" class="overlay hidden">
+    <div class="overlay-box" style="
+        background: #2c2c2c;
+        border: 6px solid #39EC08;
+        color: white;
+        text-align: center;
+        padding: 40px;
+        border-radius: 20px;">
+        
+        <h1 class="overlay-title" style="font-size: 48px; margin-bottom: 5px; color:#39EC08;">
+            PARABÉNS!
+        </h1>
+
+        <p class="overlay-sub" style="font-size: 20px; margin-bottom: 20px; color:white;">
+            Você venceu! Cada ação sua faz a diferença pelo planeta!
+        </p>
+
+        <p style="font-size: 26px; margin-bottom: 20px; color:white;">
+            Pontos finais: <span id="finalScore" style="color:white;">0</span>
+        </p>
+
+        <button id="restartWinBtn" class="btn overlay-btn" 
+            style="margin-top: 20px; background:#39EC08; color:white; padding:12px 25px; font-size:22px;">
+            Recomeçar
+        </button>
+    </div>
+</div>
+
+ 
+<!-- Áudio -->
+<audio id="gameMusic" src="audio/thinking-time-148496.mp3" preload="auto" loop></audio>
+ 
+<script src="script.js"></script>
+</body>
+</html>
