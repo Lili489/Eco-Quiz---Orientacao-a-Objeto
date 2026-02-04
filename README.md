@@ -142,11 +142,9 @@ Isso ajuda o projeto a ganhar mais visibilidade.
 
 &nbsp;
 
-<p align="center">
-
-&nbsp; <img src="img/forest.jpg" width="500">
-
+p align="center">
+  <img src="img/foto1.png" width="500">
 </p>
-
+ 
 
 
